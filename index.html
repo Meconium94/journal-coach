@@ -81,7 +81,7 @@ window.ai_edge_gallery_get_result = async function(data) {
 
     // 5. Tronquer si nécessaire pour tenir dans le contexte (128K tokens de Gemma 4 E4B)
     //    50 000 caractères ≈ 12 000–15 000 tokens — amplement suffisant pour un journal
-    const MAX_CHARS = 50000;
+    const MAX_CHARS = 15000;
     const truncated = text.length > MAX_CHARS
       ? text.substring(0, MAX_CHARS) +
         `\n\n[⚠️ Document tronqué — seuls les ${MAX_CHARS.toLocaleString()} premiers caractères ont été chargés sur ${text.length.toLocaleString()} au total.]`
